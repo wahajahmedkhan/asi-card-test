@@ -1,1 +1,84 @@
-/* You can add global styles to this file, and also import other style files */
+@use "scss/bootstrap/bootstrap" as *;
+
+.block {
+  .block-cards {
+
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    grid-gap: 1rem;
+    padding-block: 1rem;
+    width: 100%;
+
+    .card {
+      height: 10rem;
+      padding: 1rem;
+      width: 300px;
+      box-shadow: $box-shadow;
+
+      &.create-card {
+        background: transparent;
+        border: 2px dashed #dee2e6;
+        display: flex;
+        justify-content: center;
+
+        .create-btn {
+          align-items: center;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          justify-content: center;
+
+          img {
+            height: 2rem;
+            object-fit: contain;
+            width: 2rem;
+          }
+
+          span {
+            font-size: 1rem;
+            font-weight: 600;
+          }
+        }
+
+      }
+
+      .card-head {
+        align-items: flex-start;
+        display: flex;
+        gap: 1rem;
+
+        .head-icon {
+          align-self: center;
+          img {
+            height: 38px;
+            object-fit: contain;
+            width: 38px;
+          }
+        }
+
+        .head-title {
+          font-weight: 600;
+
+          h4 {
+            font-size: 1.2rem;
+            line-height: 14px;
+            margin: 12px 0 4px 0;
+          }
+
+          span {
+            font-size: 0.8rem;
+            color: #8d8d8d;
+          }
+        }
+      }
+
+      .card-description {
+        font-size: 14px;
+        font-weight: 600;
+        padding: 8px 0 0;
+      }
+    }
+  }
+}
+
